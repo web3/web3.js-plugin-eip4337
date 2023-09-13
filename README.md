@@ -1,13 +1,9 @@
-@chainsafe/web3-plugin-template
+Web3.js EIP4337 Plugin
 ===========
+This plugin is developed and maintained by [Blocto](https://blocto.io/) .
 
-Contributing
-------------
+This is a [web3.js](https://github.com/web3/web3.js) `4.x` plugin for Account Abstraction functionality.
 
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
 
 License
 -------
