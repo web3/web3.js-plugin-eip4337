@@ -8,6 +8,12 @@ describe("EIP4337Plugin Tests", () => {
     expect(web3Context.EIP4337).toBeDefined();
   });
 
+  it("should register TokensPlugin plugin on Web3 instance", () => {
+    const web3 = new Web3("http://127.0.0.1:8545");
+    web3.registerPlugin(new EIP4337Plugin());
+    expect(web3.EIP4337).toBeDefined();
+  });
+
   describe("EIP4337Plugin method tests", () => {
     let consoleSpy: jest.SpiedFunction<typeof global.console.log>;
 
