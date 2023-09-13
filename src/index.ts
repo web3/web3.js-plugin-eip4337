@@ -1,7 +1,7 @@
 import { Web3PluginBase } from "web3";
 
-export class TemplatePlugin extends Web3PluginBase {
-  public pluginNamespace = "template";
+export class EIP4337Plugin extends Web3PluginBase {
+  public pluginNamespace = "EIP4337";
 
   public test(param: string): void {
     console.log(param);
@@ -11,6 +11,6 @@ export class TemplatePlugin extends Web3PluginBase {
 // Module Augmentation
 declare module "web3" {
   interface Web3Context {
-    template: TemplatePlugin;
+    EIP4337: EIP4337Plugin;
   }
 }
