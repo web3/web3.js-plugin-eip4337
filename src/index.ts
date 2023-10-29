@@ -12,7 +12,6 @@ import {
   GetUserOperationReceiptAPI,
   UserOperationRequire,
 } from "./type";
-// import { isUserOperationAllHex } from "./validator";
 import { generateUserOpHash } from "./utils/generateUserOpHash";
 
 type CustomRpcApi = {
@@ -69,8 +68,6 @@ export class EIP4337Plugin extends Web3PluginBase<CustomRpcApi> {
     userOperation: UserOperation,
     entryPoint: Address
   ) {
-    // const validator = isUserOperationAllHex(userOperation);
-    // if (validator) return;
     return this.requestManager.send({
       method: "eth_sendUserOperation",
       params: [userOperation, entryPoint],
@@ -110,9 +107,16 @@ export class EIP4337Plugin extends Web3PluginBase<CustomRpcApi> {
     userOperation: UserOperation,
     entryPoint: Address
   ) {
+    const userOp = { ...userOperation };
+    if (userOperation?.maxFeePerGas === undefined) {
+      userOp.maxFeePerGas = "0";
+    }
+    if (userOperation?.maxPriorityFeePerGas === undefined) {
+      userOp.maxPriorityFeePerGas = "0";
+    }
     return this.requestManager.send({
       method: "eth_estimateUserOperationGas",
-      params: [userOperation, entryPoint],
+      params: [userOp, entryPoint],
     });
   }
   /**
