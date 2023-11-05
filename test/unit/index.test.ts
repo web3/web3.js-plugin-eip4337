@@ -1,8 +1,8 @@
 import Web3 from "web3";
-import { EIP4337Plugin } from "../src";
-import { UserOperation, UserOperationRequire } from "../src/type";
+import { EIP4337Plugin } from "../../src";
+import { UserOperation, UserOperationRequire } from "../../src/type";
 
-describe("EIP4337Plugin Tests", () => {
+describe("EIP-4337 Plugin Tests", () => {
   let web3Context: Web3;
   let sendSpy: jest.SpyInstance;
   const requestManagerSendSpy = jest.fn();
