@@ -13,6 +13,8 @@ import {
   UserOperationRequire,
 } from "./type";
 import { generateUserOpHash } from "./utils/generateUserOpHash";
+import { isUserOperationAllHex } from "./validator";
+import { convertValuesToHex } from "./utils/convertValueToHex";
 
 type CustomRpcApi = {
   eth_sendUserOperation: (
@@ -68,9 +70,14 @@ export class EIP4337Plugin extends Web3PluginBase<CustomRpcApi> {
     userOperation: UserOperation,
     entryPoint: Address
   ) {
+    let userOp = { ...userOperation };
+    const validator = isUserOperationAllHex(userOp);
+    if (!validator) {
+      userOp = convertValuesToHex(userOperation) as UserOperation;
+    }
     return this.requestManager.send({
       method: "eth_sendUserOperation",
-      params: [userOperation, entryPoint],
+      params: [userOp, entryPoint],
     });
   }
   /**
