@@ -1,0 +1,35 @@
+name: Run Tests
+
+on:
+  pull_request:
+    types: [opened, synchronize, ready_for_review]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+
+      - name: Install Dependencies
+        run: yarn
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Build
+        run: yarn build
+
+      - name: Unit Tests
+        run: yarn test
+
+      - name: End-to-End Tests (Firefox)
+        run: yarn test:e2e:firefox
+
+      - name: Generate Coverage Report
+        run: yarn test:coverage
