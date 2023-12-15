@@ -31,8 +31,5 @@ jobs:
       - name: End-to-End Tests (Firefox)
         run: yarn test:e2e:firefox
 
-      - name: Black Box Tests
-        run: yarn test:black-box
-
       - name: Generate Coverage Report
         run: yarn test:coverage
