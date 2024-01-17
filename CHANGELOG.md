@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.0 (2024-01-02)
+## 0.1.0
 
 
 ### Features
@@ -20,3 +20,9 @@
 * github action trigger config ([#3](https://github.com/web3/web3.js-plugin-eip4337/issues/3)) ([ef7b962](https://github.com/web3/web3.js-plugin-eip4337/commit/ef7b9621b6f7afac7a1e986037a3d00f9f0858c9))
 * update lock file ([b62150d](https://github.com/web3/web3.js-plugin-eip4337/commit/b62150df9ed1f45c60d0fc6568a39f8191681b8c))
 * use web3-validator ([d450e29](https://github.com/web3/web3.js-plugin-eip4337/commit/d450e2929e7193a52678c1488c2cd4bfee235c64))
+
+## 0.1.1
+
+### Fixed
+
+* Updated build by filtering unnecessary files and added required util

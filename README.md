@@ -4,6 +4,17 @@
 
 Web3.js EIP4337 is a [web3.js](https://github.com/web3/web3.js) `4.x` plugin for Account Abstraction functionality.
 
+## Prerequisites
+
+-   :gear: [NodeJS](https://nodejs.org/) (LTS/Fermium)
+-   :toolbox: [Yarn](https://yarnpkg.com/)
+
+## Installation and usage
+
+```bash
+yarn add @chainsafe/web3-plugin-eip4337
+```
+
 
 ```ts
 import { Web3 } from 'web3';
