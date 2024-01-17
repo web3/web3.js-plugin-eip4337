@@ -5,6 +5,7 @@
 .gitignore
 .lintstagedrc.json
 .nycrc
+.github
 .prettierrc.json
 .prettierignore
 cypress.json
