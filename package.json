@@ -1,5 +1,5 @@
 {
-  "name": "web3-plugin-eip4337",
+  "name": "@chainsafe/web3-plugin-eip4337",
   "version": "0.1.0",
   "description": "web3-plugin-eip4337 plugin",
   "main": "lib/index.js",
