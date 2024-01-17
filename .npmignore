@@ -11,6 +11,7 @@ cypress.json
 index.html
 Jenkinsfile*
 *.log
+cypress.config.js
 
 .nyc_output/
 coverage/
