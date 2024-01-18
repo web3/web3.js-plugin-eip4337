@@ -18,7 +18,7 @@ yarn add @chainsafe/web3-plugin-eip4337
 
 ```ts
 import { Web3 } from 'web3';
-import { EIP4337Plugin } from 'web3-plugin-eip4337';
+import { EIP4337Plugin } from '@chainsafe/web3-plugin-eip4337';
 
 const web3 = new Web3('http://127.0.0.1:8545');
 web3.registerPlugin(new EIP4337Plugin());
