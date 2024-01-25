@@ -13,12 +13,6 @@ You can use the CodeSandbox links below to try out Web3.js EIP4337 plugin:
 
 - with [Blocto](https://codesandbox.io/s/github/blocto/blocto-sdk-examples/tree/main/with-web3js-4337)
 
-## Create a template with next.js
-
-```
-npx create-next-app demo --example https://github.com/blocto/blocto-sdk-examples/with-web3js-4337
-```
-
 ## Prerequisites
 
 - :gear: [NodeJS](https://nodejs.org/) (LTS/Fermium)
